@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Morim — Software Developer</title>
+  <meta name="description"
+    content="Full-stack software engineer based in Porto, Portugal. Building scalable web applications from database to UI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ─── NAVIGATION ─────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">LM<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ───────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+    </div>
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero__available reveal">
+          <span class="hero__available-dot"></span>
+          Available for new opportunities
+        </div>
+        <h1 class="hero__name reveal reveal--delay-1">Lucas Morim</h1>
+        <p class="hero__role reveal reveal--delay-2">
+          I build&nbsp;<span class="hero__typed" id="typedText"></span><span class="hero__cursor" id="cursor">|</span>
+        </p>
+        <p class="hero__tagline reveal reveal--delay-3">
+          Full-stack software engineer crafting scalable web applications — from database to UI.
+          Currently engineering enterprise solutions at <strong>Capgemini Engineering</strong>, Porto.
+        </p>
+        <div class="hero__actions reveal reveal--delay-4">
+          <a href="#projects" class="btn btn--primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn--ghost">
+            Let's Talk
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+        <div class="hero__socials reveal reveal--delay-4">
+          <a href="mailto:lucasmorim05@gmail.com" class="hero__social" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/lucfgm" class="hero__social" aria-label="LinkedIn" target="_blank"
+            rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="https://github.com/lucas-morim" class="hero__social" aria-label="GitHub" target="_blank"
+            rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual reveal reveal--delay-3">
+        <div class="hero__photo">
+          <img src="assets/photo.png" alt="Lucas Morim" class="hero__photo-img" />
+          <div class="hero__photo-ring"></div>
+          <div class="hero__photo-glow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ──────────────────────────────────────────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">01 — About</span>
+        <h2 class="section__title">Who I Am</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            I'm a <strong>Multimedia Engineering student</strong> at ISLA Gaia, Porto, with hands-on professional
+            experience shipping production software at real scale. From developing large-scale financial applications at
+            <strong>BTG Pactual</strong> in São Paulo to engineering enterprise internal tools at <strong>Capgemini
+              Engineering</strong> in Portugal — I write code that people depend on.
+          </p>
+          <p>
+            My focus is <strong>.NET and C#</strong> on the backend — building clean, well-tested APIs with Entity
+            Framework and SQL Server. On the frontend, I pair that with <strong>Angular</strong>. I've worked with other
+            stacks along the way (Node.js, Laravel, Python), but .NET is where I'm doubling down.
+          </p>
+          <p>
+            I've also taught on the other side of the desk — as a <strong>Lecturer at ISTEC</strong>, covering
+            Algorithms and Data Structures in C#. Teaching fundamentals sharpened how I think about software, not just
+            how to use frameworks.
+          </p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-num">4+</span>
+              <span class="about__stat-label">Professional Roles</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-num">2</span>
+              <span class="about__stat-label">Countries Worked In</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-num">10+</span>
+              <span class="about__stat-label">Technologies Used</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__card-wrap reveal reveal--delay-2">
+          <div class="about__card">
+            <div class="about__card-bar">
+              <div class="about__card-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="about__card-filename">lucas.json</span>
+            </div>
+            <pre class="about__code"><code><span class="t-brace">{</span>
+  <span class="t-key">"name"</span><span class="t-punc">:</span> <span class="t-str">"Lucas Morim"</span><span class="t-punc">,</span>
+  <span class="t-key">"location"</span><span class="t-punc">:</span> <span class="t-str">"Porto, Portugal"</span><span class="t-punc">,</span>
+  <span class="t-key">"role"</span><span class="t-punc">:</span> <span class="t-str">"Full-Stack Engineer"</span><span class="t-punc">,</span>
+  <span class="t-key">"education"</span><span class="t-punc">:</span> <span class="t-str">"Multimedia Engineering"</span><span class="t-punc">,</span>
+  <span class="t-key">"available"</span><span class="t-punc">:</span> <span class="t-bool">true</span><span class="t-punc">,</span>
+  <span class="t-key">"stack"</span><span class="t-punc">:</span> <span class="t-brace">[</span>
+    <span class="t-str">".NET"</span><span class="t-punc">,</span> <span class="t-str">"Angular"</span><span class="t-punc">,</span>
+    <span class="t-str">"Node.js"</span><span class="t-punc">,</span> <span class="t-str">"Laravel"</span><span class="t-punc">,</span> <span class="t-str">"Python"</span>
+  <span class="t-brace">]</span><span class="t-punc">,</span>
+  <span class="t-key">"languages"</span><span class="t-punc">:</span> <span class="t-brace">[</span>
+    <span class="t-str">"Portuguese"</span><span class="t-punc">,</span>
+    <span class="t-str">"English"</span><span class="t-punc">,</span>
+    <span class="t-str">"Spanish"</span>
+  <span class="t-brace">]</span><span class="t-punc">,</span>
+  <span class="t-key">"passion"</span><span class="t-punc">:</span> <span class="t-str">"Full-stack architecture and APIs"</span>
+<span class="t-brace">}</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─────────────────────────────────────────────────── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">02 — Skills</span>
+        <h2 class="section__title">Technical Stack</h2>
+      </div>
+      <div class="skills__grid">
+        <div class="skills__cat reveal">
+          <div class="skills__cat-header">
+            <span class="skills__cat-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </span>
+            <h3>Languages</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="tag tag--indigo">C#</span>
+            <span class="tag tag--indigo">JavaScript</span>
+            <span class="tag tag--indigo">TypeScript</span>
+            <span class="tag tag--indigo">Python</span>
+            <span class="tag tag--indigo">Java</span>
+            <span class="tag tag--indigo">PHP</span>
+            <span class="tag tag--indigo">SQL</span>
+            <span class="tag tag--indigo">Dart</span>
+            <span class="tag tag--indigo">HTML</span>
+            <span class="tag tag--indigo">CSS</span>
+          </div>
+        </div>
+        <div class="skills__cat reveal reveal--delay-1">
+          <div class="skills__cat-header">
+            <span class="skills__cat-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <line x1="9" y1="21" x2="9" y2="9" />
+              </svg>
+            </span>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="tag tag--sky">Angular</span>
+            <span class="tag tag--sky">Flutter</span>
+            <span class="tag tag--sky">Bootstrap</span>
+            <span class="tag tag--sky">HTML5</span>
+            <span class="tag tag--sky">CSS3</span>
+          </div>
+        </div>
+        <div class="skills__cat reveal reveal--delay-2">
+          <div class="skills__cat-header">
+            <span class="skills__cat-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+              </svg>
+            </span>
+            <h3>Backend</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="tag tag--violet">.NET Web API</span>
+            <span class="tag tag--violet">Node.js</span>
+            <span class="tag tag--violet">Express</span>
+            <span class="tag tag--violet">Laravel</span>
+            <span class="tag tag--violet">Entity Framework</span>
+          </div>
+        </div>
+        <div class="skills__cat reveal reveal--delay-1">
+          <div class="skills__cat-header">
+            <span class="skills__cat-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg>
+            </span>
+            <h3>Databases</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="tag tag--emerald">MySQL</span>
+            <span class="tag tag--emerald">PostgreSQL</span>
+            <span class="tag tag--emerald">SQL Server</span>
+            <span class="tag tag--emerald">MongoDB</span>
+          </div>
+        </div>
+        <div class="skills__cat reveal reveal--delay-2">
+          <div class="skills__cat-header">
+            <span class="skills__cat-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+              </svg>
+            </span>
+            <h3>Tools &amp; Cloud</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="tag tag--amber">Git</span>
+            <span class="tag tag--amber">AWS</span>
+            <span class="tag tag--amber">RabbitMQ</span>
+            <span class="tag tag--amber">FFmpeg</span>
+            <span class="tag tag--amber">xUnit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─────────────────────────────────────────────── -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">03 — Experience</span>
+        <h2 class="section__title">Career Timeline</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-dot tl-dot--active"></div>
+          <div class="tl-card">
+            <div class="tl-card__top">
+              <div>
+                <h3 class="tl-card__role">Software Engineer Intern</h3>
+                <p class="tl-card__company">Capgemini Engineering</p>
+              </div>
+              <div class="tl-card__meta">
+                <span class="tl-card__date">Mar 2026 — Present</span>
+                <span class="tl-card__loc">Vila Nova de Gaia, PT</span>
+              </div>
+            </div>
+            <ul class="tl-card__points">
+              <li>Built full-stack web application using <strong>.NET Web API</strong> and <strong>Angular</strong></li>
+              <li>Focused on process optimization and centralization of employee data</li>
+              <li>Improved visibility of skills and allocation in IT consulting environment</li>
+            </ul>
+            <div class="tl-card__stack">
+              <span>.NET</span><span>C#</span><span>Angular</span><span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-card__top">
+              <div>
+                <h3 class="tl-card__role">Lecturer</h3>
+                <p class="tl-card__company">ISTEC — Higher Institute of Advanced Technologies of Porto</p>
+              </div>
+              <div class="tl-card__meta">
+                <span class="tl-card__date">Sep 2025 — Mar 2026</span>
+                <span class="tl-card__loc">Porto, PT</span>
+              </div>
+            </div>
+            <ul class="tl-card__points">
+              <li>Taught <strong>Algorithms &amp; Data Structures</strong> in C# and Content Management Systems</li>
+              <li>Prepared and delivered theoretical and practical curriculum</li>
+              <li>Supported student learning in software development programs</li>
+            </ul>
+            <div class="tl-card__stack">
+              <span>C#</span><span>Algorithms</span><span>Data Structures</span><span>CMS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-card__top">
+              <div>
+                <h3 class="tl-card__role">Software Engineer Intern</h3>
+                <p class="tl-card__company">BTG Pactual</p>
+              </div>
+              <div class="tl-card__meta">
+                <span class="tl-card__date">Jul 2025 — Sep 2025</span>
+                <span class="tl-card__loc">São Paulo, BR</span>
+              </div>
+            </div>
+            <ul class="tl-card__points">
+              <li>Worked on large-scale financial applications using <strong>C#</strong> and <strong>Angular</strong>
+              </li>
+              <li>Used <strong>AWS</strong>, <strong>RabbitMQ</strong>, <strong>PostgreSQL</strong>, and <strong>SQL
+                  Server</strong></li>
+              <li>Practiced agile methodologies within a cross-functional engineering team</li>
+            </ul>
+            <div class="tl-card__stack">
+              <span>C#</span><span>Angular</span><span>AWS</span><span>RabbitMQ</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-card__top">
+              <div>
+                <h3 class="tl-card__role">Web Developer</h3>
+                <p class="tl-card__company">ISLA Gaia — Polytechnical University of Management and Technology</p>
+              </div>
+              <div class="tl-card__meta">
+                <span class="tl-card__date">Mar 2025 — Jul 2025</span>
+                <span class="tl-card__loc">Vila Nova de Gaia, PT</span>
+              </div>
+            </div>
+            <ul class="tl-card__points">
+              <li>Developed web applications using <strong>PHP</strong> and <strong>Laravel</strong></li>
+              <li>Focused on clean architecture principles and scalability</li>
+              <li>Collaborated in team-based development projects</li>
+            </ul>
+            <div class="tl-card__stack">
+              <span>PHP</span><span>Laravel</span><span>MySQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ───────────────────────────────────────────────── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">04 — Projects</span>
+        <h2 class="section__title">What I've Built</h2>
+        <p class="section__subtitle">Production-grade applications built with real constraints, real users, and real
+          deadlines.</p>
+      </div>
+
+      <!-- Project 1 -->
+      <article class="proj reveal">
+        <div class="proj__media">
+          <div class="proj__video" data-video="assets/project_videos/VAS_Video.mp4">
+            <video src="assets/project_videos/VAS_Video.mp4" loop muted playsinline autoplay></video>
+          </div>
+        </div>
+        <div class="proj__content">
+          <div class="proj__meta">
+            <span class="proj__num">01</span>
+            <span class="proj__badge">Academic Project</span>
+          </div>
+          <h3 class="proj__title">VAS — Virtual Audio Scape</h3>
+          <p class="proj__desc">
+            A full-stack web platform where users explore, purchase, and layer real-world sounds into custom immersive
+            audio environments. Includes a built-in lightweight video editor — letting content creators add ambient
+            soundscapes to their videos without specialist software. Built for content creators, small studios, and
+            digital media production.
+          </p>
+          <ul class="proj__highlights">
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Sound marketplace with audio mixing controls
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Video processing integration via FFmpeg pipeline
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              User authentication and full e-commerce flow
+            </li>
+          </ul>
+          <div class="proj__tech">
+            <span>Node.js</span><span>Express</span><span>MySQL</span><span>FFmpeg</span>
+            <span>JavaScript</span><span>HTML5</span><span>Bootstrap</span>
+          </div>
+          <div class="proj__links">
+            <a href="https://github.com/lucas-morim/vas-studio" class="proj__link proj__link--primary" target="_blank"
+              rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="proj proj--reverse reveal">
+        <div class="proj__media">
+          <div class="proj__video" data-video="">
+            <div class="proj__placeholder proj__placeholder--professional">
+              <div class="proj__play-ring">
+                <button class="proj__play-btn" aria-label="Play demo">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </button>
+              </div>
+              <span class="proj__placeholder-label">Demo Preview</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj__content">
+          <div class="proj__meta">
+            <span class="proj__num">02</span>
+            <span class="proj__badge proj__badge--pro">Professional Project</span>
+          </div>
+          <h3 class="proj__title">Bench Resource Management</h3>
+          <p class="proj__desc">
+            An enterprise internal application built at Capgemini Engineering to centralize and improve visibility of
+            employee skills, certifications, and project allocation across IT consulting teams. Replaced fragmented
+            manual tracking with a unified platform — cutting overhead and enabling smarter resource planning decisions
+            at scale.
+          </p>
+          <ul class="proj__highlights">
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              RESTful API with .NET and Entity Framework Core
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              SOLID principles, clean architecture, unit-tested with xUnit
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Built in Agile sprints with cross-functional collaboration
+            </li>
+          </ul>
+          <div class="proj__tech">
+            <span>.NET</span><span>C#</span><span>Angular</span>
+            <span>MongoDB</span><span>Entity Framework</span><span>xUnit</span>
+          </div>
+          <div class="proj__links">
+            <span class="proj__link proj__link--locked">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
+              Private — Professional Work
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="proj reveal">
+        <div class="proj__media">
+          <div class="proj__video" data-video="assets/project_videos/Retail_video.mp4">
+            <video src="assets/project_videos/Retail_video.mp4" loop muted playsinline autoplay></video>
+          </div>
+        </div>
+        <div class="proj__content">
+          <div class="proj__meta">
+            <span class="proj__num">03</span>
+            <span class="proj__badge">Academic Project</span>
+          </div>
+          <h3 class="proj__title">Retail Management System</h3>
+          <p class="proj__desc">
+            A Windows Forms application simulating the core operations of a real retail store — inventory control, sales
+            processing, and employee and client management. Built with distinct user roles (Admin, Manager, Employee,
+            Client), each with their own permissions and access levels, closely reflecting a real-world retail
+            environment.
+          </p>
+          <ul class="proj__highlights">
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Layered architecture — Data, Control, and Presentation layers
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Role-based access control with full CRUD across all entities
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              SQL Server backend with realistic dataset and BLOB image storage
+            </li>
+          </ul>
+          <div class="proj__tech">
+            <span>C#</span><span>SQL Server</span><span>Windows Forms</span><span>.NET</span>
+          </div>
+          <div class="proj__links">
+            <a href="https://github.com/lucas-morim/retail-management-system" class="proj__link proj__link--primary"
+              target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="proj proj--reverse reveal">
+        <div class="proj__media">
+          <div class="proj__video" data-video="">
+            <div class="proj__media">
+              <div class="proj__video" data-video="assets/project_videos/Islanders_video.mp4">
+                <video src="assets/project_videos/Islanders_video.mp4" loop muted playsinline autoplay></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="proj__content">
+          <div class="proj__meta">
+            <span class="proj__num">04</span>
+            <span class="proj__badge">Academic Project</span>
+          </div>
+          <h3 class="proj__title">Islanders — Course Platform</h3>
+          <p class="proj__desc">
+            A full-stack web platform built for ISLA Gaia that lets prospective students explore courses, test their
+            knowledge through quizzes, and earn badges based on performance. Features a personalized profile area with
+            progress tracking and a complete backoffice with role-based access for admins, teachers, and students.
+          </p>
+          <ul class="proj__highlights">
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              FastAPI backend with JWT auth and role-based guards (Admin, Teacher, Student, Guest)
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Angular frontend with interceptors, signals, and separated front/back/login shells
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Gamification system — quiz-based badge awards and user progress tracking
+            </li>
+          </ul>
+          <div class="proj__tech">
+            <span>Python</span><span>FastAPI</span><span>Angular</span>
+            <span>TypeScript</span><span>PostgreSQL</span><span>SQLAlchemy</span>
+          </div>
+          <div class="proj__links">
+            <a href="https://github.com/lucas-morim/islanders-fullstack" class="proj__link proj__link--primary"
+              target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ────────────────────────────────────────────────── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">05 — Contact</span>
+        <h2 class="section__title">Let's Build Something</h2>
+        <p class="section__subtitle">Open to new roles, freelance projects, and interesting conversations about
+          software.</p>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__items reveal">
+          <a href="mailto:lucasmorim05@gmail.com" class="contact__item">
+            <div class="contact__item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div>
+              <span class="contact__label">Email</span>
+              <span class="contact__value">lucasmorim05@gmail.com</span>
+            </div>
+            <svg class="contact__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/lucfgm" class="contact__item" target="_blank" rel="noopener">
+            <div class="contact__item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </div>
+            <div>
+              <span class="contact__label">LinkedIn</span>
+              <span class="contact__value">Connect with me</span>
+            </div>
+            <svg class="contact__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="https://github.com/lucas-morim" class="contact__item" target="_blank" rel="noopener">
+            <div class="contact__item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+            </div>
+            <div>
+              <span class="contact__label">GitHub</span>
+              <span class="contact__value">See my codes</span>
+            </div>
+            <svg class="contact__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <div class="contact__item contact__item--static">
+            <div class="contact__item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div>
+              <span class="contact__label">Location</span>
+              <span class="contact__value">Porto, Portugal</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact__cta reveal reveal--delay-2">
+          <div class="contact__cta-card">
+            <div class="contact__cta-glow"></div>
+            <h3>Ready to collaborate?</h3>
+            <p>Whether it's a job opportunity, a freelance project, or just a good conversation about building things —
+              I'm always open.</p>
+            <a href="mailto:lucasmorim05@gmail.com" class="btn btn--primary">
+              Send a Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#hero" class="footer__logo">LM<span>.</span></a>
+        <p class="footer__copy">Lucas Morim &nbsp;·&nbsp; Porto, Portugal &nbsp;·&nbsp; 2025</p>
+        <div class="footer__links">
+          <a href="mailto:lucasmorim05@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/lucfgm" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/lucas-morim" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── VIDEO MODAL ──────────────────────────────────────────── -->
+  <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <video class="modal__video" id="modalVideo" controls playsinline></video>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
