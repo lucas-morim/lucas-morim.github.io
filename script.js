@@ -127,8 +127,9 @@ const modalVideo  = document.getElementById('modalVideo');
 const modalClose  = document.getElementById('modalClose');
 const modalBg     = document.getElementById('modalBackdrop');
 
-function openModal(src) {
+function openModal(src, portrait = false) {
   modal.classList.add('open');
+  modal.classList.toggle('modal--portrait', portrait);
   document.body.style.overflow = 'hidden';
   if (src) {
     modalVideo.src = src;
@@ -137,15 +138,17 @@ function openModal(src) {
 }
 
 function closeModal() {
-  modal.classList.remove('open');
+  modal.classList.remove('open', 'modal--portrait');
   modalVideo.pause();
   modalVideo.src = '';
   document.body.style.overflow = '';
 }
 
 document.querySelectorAll('.proj__video').forEach(videoBox => {
+  if (!videoBox.dataset.video) return;
   videoBox.addEventListener('click', () => {
-    openModal(videoBox.dataset.video);
+    const isPortrait = videoBox.classList.contains('proj__video--portrait');
+    openModal(videoBox.dataset.video, isPortrait);
   });
 });
 
